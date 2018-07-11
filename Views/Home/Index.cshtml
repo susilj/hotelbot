@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .bd-callout-warning {
+        border-left-color: #f0ad4e;
+    }
+
+    .bd-callout {
+        padding: 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        border: 1px solid #eee;
+        border-left-width: .25rem;
+        border-radius: .25rem;
+        border-left-color: #f0ad4e;
+    }
+</style>
+<div class="row">
+    <div class="col-md-8">
+        <p class="pt-4">
+            HotelBot is a sample application to stimulate room reservation using Microsoft Bot Framework. It uses <a href="https://www.luis.ai">LUIS</a>, machine learning-based service to build natural language processing capability to the bot.
+        </p>
+        <p>
+            To interact with bot framework user/client needs to initiate by uttering in the chat window. Utterance is text input from the user that the client application needs to understand.
+            It may be a sentence, like "Hi" or "I would like to reserve a room", or a fragment of a sentence, like "reserve room" or "book room." Utterances aren't always well-formed, and there can be many utterance variations for a particular intent.
+        </p>
+        <p><strong>Commands to interact with bot.</strong></p>
+        <p class="bd-callout bd-callout-warning">There are multiple dialogs which LUIS is trained to respond. Initial greetings are handled as greeting dialog, when user types hi / howdy / goodmorning, etc bot would respond greeting the user.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="~/Content/images/BotGreeting.jpg" alt="greeting" />
+            </div>
+            <div class="col-md-6">
+                <img src="~/Content/images/BotGreeting-1.jpg" alt="greeting-1" />
+            </div>
+        </div>
+        <p class="bd-callout bd-callout-warning">To reserve a room initiate the reservation dialog using 'i would like to reserve a room', 'reserve room' or 'book room' this would present you with list of options.</p>
+        <div><img src="~/Content/images/BedSelection.jpg" alt="greeting" /></div>
+        <div class="bd-callout bd-callout-warning">
+            <h5 id="conveying-meaning-to-assistive-technologies">Note</h5>
+            <p>The bot framework api is hosted in Azure.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div id="bot" />
+    </div>
+</div>
+<hr />
